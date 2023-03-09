@@ -11,3 +11,9 @@ find $DIR_BASE/etc -depth -type d -exec chmod g+s {} +
 find $DIR_BASE/etc -depth -type d -exec setfacl -d -m u::rwX,g::rwX,o::- {} +
 find $DIR_BASE -depth -type f -exec chmod 660 {} +
 ```
+
+## SNMP Trap Testing
+
+```shell
+snmptrap -c public -v 1 10.1.1.1 .1.3.6.1.6.3 "" 0 0 coldStart.0
+```
