@@ -17,3 +17,11 @@ find $DIR_BASE -depth -type f -exec chmod 660 {} +
 ```shell
 snmptrap -c public -v 1 10.1.1.1 .1.3.6.1.6.3 "" 0 0 coldStart.0
 ```
+
+## Writing Files
+
+When writing to a file, if the acitivity could be interrupted do the following to avoid file corrupt.
+Rename is an atomic action if performed on the same device
+
+1. Write to tmp file
+2. Rename tmp file to real file name
