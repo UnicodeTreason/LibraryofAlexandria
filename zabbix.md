@@ -24,7 +24,7 @@ Zabbix Server communicates to the Host via the IP/DNS configured in the Interfac
 
 ```mermaid
   sequenceDiagram
-    ActiveItem->Server: [10051] What do I need to collect? My HostName is X
-    Server->ActiveItem: [10051] HostNameX needs to collect ItemX
-    ActiveItem->Server: [10051] Here is the data for ItemX for HostNameX  
+    ActiveItem->>Server: [10051] What do I need to collect? My HostName is X
+    Server->>ActiveItem: [10051] HostNameX needs to collect ItemX
+    ActiveItem->>Server: [10051] Here is the data for ItemX for HostNameX  
 ```
