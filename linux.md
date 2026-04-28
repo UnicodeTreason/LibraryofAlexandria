@@ -12,6 +12,12 @@ find $DIR_BASE/etc -depth -type d -exec setfacl -d -m u::rwX,g::rwX,o::- {} +
 find $DIR_BASE -depth -type f -exec chmod 660 {} +
 ```
 
+## SNMP Query Testing
+
+```shell
+snmpwalk -v 2c -c 'community' 10.0.0.1 .1
+```
+
 ## SNMP Trap Testing
 
 ```shell
